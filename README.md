@@ -70,9 +70,10 @@ MODIFIED - EDITADO - TEM MUDANÇAS
 STAGED - ADICIONADO AO GIT (PREPARADO PARA COMMIT)
 ````
 
-## MARKDOWN 😍
+## MARKDOWN E DICAS 😍
 [Sintaxe básica de formatação do README](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 ````
+USAR VSCODE WEB PRESSIONANDO .
 README.SO  - EDITOR DE README FÁCIL COM VISUALIZADOR
 WINDOWS + . (MOSTRA MENU DE EMOJIS)
 ````
