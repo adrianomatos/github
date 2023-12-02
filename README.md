@@ -5,6 +5,7 @@ GIT CONFIG --GLOBAL USER.NAME "Adriano"
 
 GIT CLONE link_repositorio - Iniciar de repositório (clona rep web)
 GIT CLONE link_repositorio novo_nome_pasta (se_quiser_mudar)
+GIT CLONE link_repositorio --BRANCH nome_branch_q_vc_quer --single-branch OU
 GIT CLONE link_repositorio --BRANCH FEATURE-1 --nome_branch_que_vc_quer
 
 GIT INIT - Inicializa git na pasta atual
@@ -42,9 +43,9 @@ GIT PUSH -U ORIGIN MAIN (MASTER <-> MAIN) Envia arquivos p/ GitHub (de MAIN p/ "
 OU
 GIT PUSH ORIGIN MASTER - Envia arquivos p/ GitHub (de Master [local] p/ "Origem" [na web])
 
-GIT FETCH - Para baixar e ver alterações (p/ avaliar) antes de dar MERGE
-GIR DIFF ORIGIN/MASTER (compara as 02 - Q p/ Sair)
-GIT PULL - Para aceitar unir ORIGIN com MASTER (baixa e une alterações web c/ local))
+GIT FETCH (GIT FETCH ORIGIN MAIN)- Para baixar e ver alterações (p/ avaliar) antes de dar MERGE
+GIT DIFF MAIN ORIGIN/MAIN (compara as 02 - Q p/ Sair)
+GIT PULL - Para aceitar unir ORIGIN com MASTER (baixa e une alterações web c/ local(pode haver conflitos, só alterar e salvar para fazer novo commit local))
 GIT PULL ORIGIN MASTER - Trás as atualizações (s/ avaliar) ou git pull
 ````
 
@@ -52,14 +53,26 @@ GIT PULL ORIGIN MASTER - Trás as atualizações (s/ avaliar) ou git pull
 ````
 GIT BRANCH - Lista branches
 GIT BRANCH -a = listar todas as branchs do repositório remoto
-GIT BRANCH nomebranchNova - Cria branch nova (com commit atual)
-GIT LOG --ONLINE --DECORATE - Mostra commits RESUMIDOS e a branch atual 
+GIT CHECKOUT -b nomebranchNova - Cria branch nova E Mudar para branch nomebranchNova
+GIT BRANCH nomebranchNova - Cria branch nova (com commit atual) 
 GIT CHECKOUT nomebranchNova - Mudar para branch nomebranchNova 
+GIT LOG --ONLINE --DECORATE - Mostra commits RESUMIDOS e a branch atual
 ... Alterações na nomebranchNova 
 GIT CHECKOUT master - Para voltar para branch principal
+GIT BRANCH -V - MOSTRA ÚLTIMO COMMIT DE CADA BRANCH
+
+* Quando quiser criar branch mesmo após commit tiver sido modificado/algum arquivo excluido
+GIT STASH (desarquiva alteração)
+GIT STASH LIST (mostra alteração arquivada)
+GIT CHECKOUT -b nomebranchNova (criar branch nova com arquivos desarquivados)
+...Após Voltar para branch desarquivada com GIT CHECKOUT nome_branch
+GIT STASH POP - mantém desarquivamento
+GIT STASH APPLAY - retorna estado modificado/excluido antes de ter criado nova branch
 
 UNIR (Merging) branches
 GIT MERGE nomebranchNova (Une as 2 branches na branch master)
+GIT MERGE ORIGIN/MAIN - quando quero unir com a branch baixada
+GIT BRANCH -D nomebranchNova - Quando quero excluir branch que não vou mais usar após MERGE
 ````
 
 ## ESTADOS DO GIT ⚠
